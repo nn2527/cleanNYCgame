@@ -1,0 +1,78 @@
+.player {
+  background: url("https://assets.codepen.io/6909773/1723100.png");
+  width: 130px;
+  height: 130px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.trash {
+  width: 110px;
+  height: 110px;
+  position: absolute;
+}
+
+.disappear {
+  display: none;
+}
+.bar {
+  width: 100%;
+  height: 20px;
+  background: greenyellow;
+  position: absolute;
+  border-radius: 100px;
+  border: 1px dotted green;
+}
+
+body {
+  background-image: url("https://img.freepik.com/free-photo/soft-cloudy-is-gradient-pastel-abstract-sky-background-sweet-color_6529-1512.jpg?size=626&ext=jpg");
+  /*https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/f5fb6a83755917.5d469874c3297.jpg*/
+  background-size: cover;
+}
+
+#scoreboard {
+  font-family: "Cabin", sans-serif;
+  color: gold;
+  background-image: url("https://media.istockphoto.com/photos/tropical-leaves-abstract-green-leaves-texture-nature-background-picture-id1254474165?b=1&k=20&m=1254474165&s=170667a&w=0&h=4yiAJ1tXxs3zoEL6S1bPpKSxpbF3XIiTb-bGMedoDtk=");
+  text-align: center;
+  display: cover;
+  padding: 1em;
+  font-size: 20px;
+  border: 3px double forestgreen;
+  border-radius: 0.75em;
+}
+
+.win {
+  font-size: 20px;
+  font-family: "Cabin", sans-serif;
+  color: #880e4f;
+  text-align: center;
+}
+button {
+  text-align: center;
+  background-color: purple;
+  color: white;
+  font-family: "Cabin", sans-serif;
+  font-size: 12px;
+  border-radius: 15px;
+  padding: 5px 7px 5px 7px;
+  border: 1px solid yellowgreen;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-left: 35%;
+}
+
+#time {
+  background-color: #69a1fa;
+  border-radius: 15px;
+  border: 3px dotted whitesmoke;
+  width: 35px;
+  height: 35px;
+  font-size: 30px;
+  text-align: center;
+  padding: 5px 5px 5px 5px;
+  position: absolute;
+  top: 1;
+  margin-left: 80%;
+}
