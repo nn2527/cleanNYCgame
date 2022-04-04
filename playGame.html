@@ -1,0 +1,36 @@
+<html>
+<head>
+  <link rel = "stylesheet" href="waterCycle.css">
+  <script src="waterCycle.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cabin&family=Fruktur&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+<div id="app">
+  <div style="border: 1px solid green; left: 5vw; width: 60vw; top: 5vh; height: 90vh; position: absolute; background: url('https://assets.codepen.io/6909773/22-central-park.jpg')"></div>
+  <div id="time">{{countdown}}</div>
+  <div style="position: absolute; right: 7vw; top: 10vh; width: 20vw; font-size: 1.1em; color: white;">
+    <h3>Let's clean NYC by picking up the trash using the instructions below:</h3>
+    <p>Type in w to move UP <br> Type in a to move LEFT <br> Type in s to move DOWN <br> Type in d to move RIGHT <br></p>
+    <input style="width: 100%;" v-model="key" @keyup="move()" placeholder="Type here" v-if="started"><br><br>
+    <button @click="startGame" v-if="!started">Start</button>
+    <br><br>
+    <div class="bar" :style="{width: score/number*100 + '%'}"></div>
+    <br><br>
+    <div class="win">
+      <div v-if="gamefinished">{{playerStatus}}</div>
+    </div><br>
+    <button class="reset" v-if="gamefinished" @click="resetInput">Replay</button>
+    <br>
+    <p id="scoreboard"> Your Karma Points are {{ score }}</p>
+
+  </div>
+
+  <div class="player" v-bind:style="{ 'left': arrayforx[playerx] + 'vw', 'top': arrayfory[playery] +'vh' }"></div>
+
+  <trash :grid="grid" :arrayforx="arrayforx" :arrayfory="arrayfory" :keycopy="keycopy" :replay="replay" @updatep="updatep" v-for="n in number">
+  </trash>
+
+</div>
+</body>
+</html>
